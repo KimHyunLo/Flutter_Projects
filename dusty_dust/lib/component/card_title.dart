@@ -1,4 +1,3 @@
-import 'package:dusty_dust/const/colors.dart';
 import 'package:flutter/material.dart';
 
 class CardTitle extends StatelessWidget {
@@ -16,7 +15,7 @@ class CardTitle extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           color: backgroundColor,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(16),
             topRight: Radius.circular(16),
           )),
@@ -24,7 +23,7 @@ class CardTitle extends StatelessWidget {
         padding: const EdgeInsets.all(4.0),
         child: Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.w700,
           ),

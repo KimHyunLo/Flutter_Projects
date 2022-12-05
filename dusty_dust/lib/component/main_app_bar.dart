@@ -21,7 +21,7 @@ class MainAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextStyle ts = TextStyle(
+    const TextStyle ts = TextStyle(
       color: Colors.white,
       fontSize: 30,
     );
@@ -38,7 +38,7 @@ class MainAppBar extends StatelessWidget {
       flexibleSpace: FlexibleSpaceBar(
         background: SafeArea(
           child: Container(
-            margin: EdgeInsets.only(top: kToolbarHeight),
+            margin: const EdgeInsets.only(top: kToolbarHeight),
             child: Column(
               children: [
                 Text(
@@ -54,16 +54,12 @@ class MainAppBar extends StatelessWidget {
                     fontSize: 20,
                   ),
                 ),
-                SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
                 Image.asset(
                   status.imagePath,
                   width: MediaQuery.of(context).size.width / 2,
                 ),
-                SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
                 Text(
                   status.label,
                   style: ts.copyWith(
@@ -71,9 +67,7 @@ class MainAppBar extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                SizedBox(
-                  height: 8,
-                ),
+                const SizedBox(height: 8),
                 Text(
                   status.comment,
                   style: ts.copyWith(

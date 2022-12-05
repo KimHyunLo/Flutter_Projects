@@ -15,7 +15,7 @@ class _TestScreenState extends State<TestScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('TestScreen'),
+        title: const Text('TestScreen'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -41,38 +41,38 @@ class _TestScreenState extends State<TestScreen> {
               print('key: ${box.keys.toList()}');
               print('values: ${box.values.toList()}');
             },
-            child: Text('Print Box'),
+            child: const Text('Print Box'),
           ),
           ElevatedButton(
             onPressed: () {
               final box = Hive.box(testBox);
               box.put(22, 'test22');
             },
-            child: Text('Add Data'),
+            child: const Text('Add Data'),
           ),
           ElevatedButton(
             onPressed: () {
               final box = Hive.box(testBox);
               print(box.get(100));
             },
-            child: Text('Specific Data'),
+            child: const Text('Specific Data'),
           ),
           ElevatedButton(
             onPressed: () {
               final box = Hive.box(testBox);
               box.delete(22);
             },
-            child: Text('Delete Data'),
+            child: const Text('Delete Data'),
           ),
           ElevatedButton(
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (_) => Test2Screen(),
+                  builder: (_) => const Test2Screen(),
                 ),
               );
             },
-            child: Text('Next Page'),
+            child: const Text('Next Page'),
           ),
         ],
       ),

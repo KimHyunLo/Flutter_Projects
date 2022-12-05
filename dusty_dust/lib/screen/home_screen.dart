@@ -48,8 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
       final box = Hive.box<StatModel>(ItemCode.PM10.name);
 
       if (box.values.isNotEmpty &&
-          (box.values.last as StatModel).dataTime.isAtSameMomentAs(fetchTime)) {
-        print('이미 최신 데이터가 있습니다.');
+          (box.values.last).dataTime.isAtSameMomentAs(fetchTime)) {
         return;
       }
 
@@ -83,9 +82,9 @@ class _HomeScreenState extends State<HomeScreen> {
           box.deleteAll(deleteKeys);
         }
       }
-    } on DioError catch (e) {
+    } on DioError {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
+        const SnackBar(
           content: Text(
             '인터넷 연결이 원활하지 않습니다.',
           ),
@@ -110,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
       valueListenable: Hive.box<StatModel>(ItemCode.PM10.name).listenable(),
       builder: (context, box, widget) {
         if (box.values.isEmpty) {
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
         }

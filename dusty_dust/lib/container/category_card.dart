@@ -1,7 +1,6 @@
 import 'package:dusty_dust/component/card_title.dart';
 import 'package:dusty_dust/component/main_card.dart';
 import 'package:dusty_dust/component/main_stat.dart';
-import 'package:dusty_dust/model/stat_and_status_model.dart';
 import 'package:dusty_dust/model/stat_model.dart';
 import 'package:dusty_dust/utils/data_utils.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +36,7 @@ class CategoryCard extends StatelessWidget {
                 Expanded(
                   child: ListView(
                     scrollDirection: Axis.horizontal,
-                    physics: PageScrollPhysics(),
+                    physics: const PageScrollPhysics(),
                     children: ItemCode.values
                         .map(
                           (ItemCode itemCode) => ValueListenableBuilder<Box>(

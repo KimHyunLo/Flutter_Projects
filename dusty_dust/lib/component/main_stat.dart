@@ -18,7 +18,7 @@ class MainStat extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ts = TextStyle(
+    const ts = TextStyle(
       color: Colors.black,
     );
 

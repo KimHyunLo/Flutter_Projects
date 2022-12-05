@@ -9,7 +9,7 @@ class Test2Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Test2Screen'),
+        title: const Text('Test2Screen'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
